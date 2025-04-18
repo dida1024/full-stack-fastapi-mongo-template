@@ -12,17 +12,15 @@ from app.core.config import settings
 from app.core.security import get_password_hash, verify_password
 from app.models import (
     Item,
-    MessageResponse,
     PasswordResetConfirm,
     User,
     UserCreate,
     UserPublic,
     UserCreate,
-    UsersPublic,
     UserUpdate,
 )
 from app.models.response import ApiResponse, PaginatedResponse
-from app.utils import generate_new_account_email, send_email
+from app.utils.email_helper import generate_new_account_email, send_email
 from beanie.odm.fields import PydanticObjectId
 from app.exceptions.auth_exceptions import AuthFail, PermissionDenied,SuperCanNotDeleteSelf
 from app.exceptions.user_exceptions import IncorrectPassword, PasswordSame, UserNotFound,UserNotActive,UserExists

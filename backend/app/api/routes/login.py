@@ -13,10 +13,12 @@ from app.core.config import settings
 from app.core.security import get_password_hash
 from app.models import MessageResponse, PasswordResetConfirm, Token, UserPublic
 from app.models.response import ApiResponse
-from app.utils import (
-    generate_password_reset_token,
+from app.utils.email_helper import (
     generate_reset_password_email,
     send_email,
+)
+from app.utils.token_helper import (
+    generate_password_reset_token,
     verify_password_reset_token,
 )
 from app.exceptions.auth_exceptions import AuthFail,UserEmailOrPasswordFail
