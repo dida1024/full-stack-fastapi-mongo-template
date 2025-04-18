@@ -48,12 +48,12 @@ services:
   db:
     restart: "no"
     ports:
-      - "5432:5432"
+      - "27017:27017"
 
-  adminer:
+  mongo-express:
     restart: "no"
     ports:
-      - "8080:8080"
+      - "8081:8081"
 
   backend:
     restart: "no"
